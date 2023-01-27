@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int tcs;
+    cin>>tcs;
+    while(tcs--){
+        string guessed;
+        cin>>guessed;
+        string pival="314159265358979323846264338327";
+        int same=0;
+        for(int i=0;i<30;i++){
+            if(guessed[i]==pival[i])
+                same++;
+            else
+                break;
+        }
+        cout<<same<<endl;
+    }
+    return 0;
+}
