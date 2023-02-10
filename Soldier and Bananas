@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n,k,w;
+	cin>>n>>k>>w;
+	int m= (n*w*(w+1))/2;
+	if(m<k)
+	cout<<0;
+	else
+	cout<<m-k;
+	return 0;
+}
+
+
+https://codeforces.com/problemset/problem/546/A
