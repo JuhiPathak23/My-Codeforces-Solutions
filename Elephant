@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int x;
+    cin>>x;
+    int a=x/5;
+    if(x%5==0)
+    cout<<a;
+    else
+    cout<<a+1;
+}
+
+
+https://codeforces.com/problemset/problem/617/A
