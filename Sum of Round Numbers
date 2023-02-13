@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        int d=0,rem=0;
+        cin>>n;
+        int res[100000];
+        if(n >= 1000){
+            rem=n%1000;
+            res[d++]=n-rem;
+            n%=1000;
+        }
+        if(n >= 100){
+            rem=n%100;
+            res[d++]=n-rem;
+            n%=100;
+        }
+        if(n >= 10){
+            rem=n%10;
+            res[d++]=n-rem;
+            n%=10;
+        }
+        if(n<10 && n>0)
+            res[d++]=n;
+        vector<int>va;
+        for(int i=0; i<d; i++)
+            va.push_back(res[i]);
+        cout<<va.size()<<endl;
+        for(int i=0; i<va.size(); i++)
+            cout<<va[i]<<" ";
+        cout<<endl;
+    }
+}
+
+
+
+https://codeforces.com/problemset/problem/1352/A
