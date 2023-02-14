@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+long long minimum(int n, int l){
+	long long a=n-l+1;
+	long long res=a,b=2;
+	for(long long i=a;i<n;i++){
+		res+=b;
+		b*=2;
+	}
+	return res;
+}
+
+
+long long maximum(int n, int r){
+	long long res=0,b=1;
+	for(long long i=1;i<=n;i++){
+		res+=b;
+		if(i<r)
+			b*=2;
+	}
+	return res;
+}
+ 
+int main(){
+	int n,l,r;
+	cin>>n>>l>>r;
+	long long x=minimum(n,l);
+	long long y=maximum(n,r);
+	cout<<x<<" "<<y;
+    return 0;
+}
