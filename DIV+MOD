@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int x,y,z;
+        cin>>x>>y>>z;
+        long d = y/z;
+        long m = y%z;
+        long res=d+m;
+        long p=(d-1)*z +(z-1);
+        if(p>=x){
+            long t=(d-1) +(z-1);
+            res=(res>t)?res:t;
+        }
+        cout<<res<<endl;
+    }
+}
