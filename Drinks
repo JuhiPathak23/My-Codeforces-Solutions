@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+        cin>>arr[i];
+    int p=0;
+    for(int i=0;i<n;i++)
+        p+=arr[i];
+    float pr=p;
+    cout<<pr/n;
+}
+
+
+https://codeforces.com/problemset/problem/200/B
