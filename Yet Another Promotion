@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        long long a,b,m,n;
+        cin>>a>>b>>n>>m;
+        long long res=a*m*(n/(m+1));
+        res+= min(n%(m+1)*a, n%(m+1)*b);
+        cout<<min(res,b*n)<<endl;
+    }
+}
+
+
+https://codeforces.com/problemset/problem/1793/A
