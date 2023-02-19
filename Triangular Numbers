@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+bool tri(int n){
+    if(n<0)
+        return false;
+    int s=0;
+    for(int i=1;s<=n;i++){
+        s+=+i;
+        if(s==n)
+            return true;
+    }
+    return false;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    if(tri(n))
+        cout<<"YES"<<endl;
+    else
+        cout<<"NO"<<endl;
+    return 0;
+}
+
+
+
+https://codeforces.com/problemset/problem/47/A
