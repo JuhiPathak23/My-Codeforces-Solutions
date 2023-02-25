@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int n,k;
+  cin>>n>>k;
+  string st;
+  cin>>st;
+  sort(st.begin(),st.end());
+  int sum= st[0]-'a'+1;
+  k--;
+  char t=st[0];
+  for(int i=1;i<n;i++){
+    if(!k){
+      break;
+    }
+    if(st[i]-t >=2){
+      t=st[i];
+      sum+=st[i]-'a' + 1;
+      k--;
+    }
+  }
+  if(!k){
+    cout<<sum<<endl;
+    return 0;
+  }
+  cout<<-1;
+}
+
+
+https://codeforces.com/problemset/problem/1011/A
