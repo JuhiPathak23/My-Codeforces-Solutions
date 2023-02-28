@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+  int n;
+  cin>>n;
+  int x,y,max=0,s=0;
+  for(int i=0;i<n;i++){
+    cin>>x>>y;
+    s-=x;
+    s+=y;
+    max=s>max?s:max;
+  }
+  cout<<max;
+  return 0;
+}
+
+
+https://codeforces.com/problemset/problem/116/A
