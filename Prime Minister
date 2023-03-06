@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    vector<int>res;
+    int x;
+    cin>>x;
+    res.push_back(1);
+    int sum=x;
+    int tmp=0;
+    for(int i=1;i<n;i++){
+	    int m;
+	    cin>>m;
+	    if(m*2 <= x){
+		    res.push_back(i+1);
+		    sum+=m;
+	    }
+	    else
+		    tmp+=m;
+    }
+    if(tmp<sum){
+	    cout<<(int)res.size()<<endl;
+	    for(auto z: res)
+		    cout <<z<< " ";
+	    cout << endl;
+    }
+    else
+	    cout << 0 << endl;
+}
+
+
+https://codeforces.com/problemset/problem/1178/A
