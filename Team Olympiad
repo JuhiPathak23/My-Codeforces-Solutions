@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n;
+  cin>>n;
+  int arr[n];
+  int c1=0,c2=0,c3=0;
+  int to;
+  int one[n],two[n],three[n];
+  for(int i=0;i<n;i++){
+    cin>>arr[i];
+    if(arr[i]==1){
+      one[c1]=i+1;
+      c1++;
+    }
+    else if(arr[i]==2){
+      two[c2]=i+1;
+      c2++;
+    }
+    else{
+      three[c3]=i+1;
+      c3++;
+    }
+    to=10000;
+    if(to>c1)
+      to=c1;
+    if(to>c2)
+      to=c2;
+    if(to>c3)
+      to=c3;
+  }
+  cout<<to<<endl;
+  for(int i=0;i<to;i++)
+    cout<<one[i]<<" "<<two[i]<<" "<<three[i]<<endl;
+}
+
+
+https://codeforces.com/problemset/problem/490/A
