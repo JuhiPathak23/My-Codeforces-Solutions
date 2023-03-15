@@ -1,0 +1,9 @@
+for t in range(int(input())):
+    c=input()
+    if c in "codeforces":
+        print("YES")
+    else:
+        print("NO")
+        
+        
+https://codeforces.com/problemset/problem/1791/A
