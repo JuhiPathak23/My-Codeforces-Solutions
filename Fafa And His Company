@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,c=1;
+    cin>>n;
+    for(int i=2;i*i<n;i++){
+        if(n%i==0)
+            c+=2;
+    }
+    if((int)sqrt(n)==(double)sqrt(n))
+        c++;
+    cout<<c<<endl;
+    return 0;
+}
+
+
+
+https://codeforces.com/problemset/problem/935/A
