@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    long long t;
+    cin>>t;
+    while(t--){
+        long long a,b,n,m;
+        cin>>a>>b>>n>>m;
+        long long x=(a<b)?a:b;
+        if((m+n <=a+b)&&(m<=x))
+        cout<<"YES"<<endl;
+        else
+        cout<<"NO"<<endl;
+    }
+ 
+    return 0;
+}
+
+
+https://codeforces.com/contest/1371/problem/C
