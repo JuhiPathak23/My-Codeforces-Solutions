@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int tstcs;
+    cin>>tstcs;
+    while(tstcs--){
+        long long num,k;
+        cin>>num>>k;
+        vector<int>array(num+1);
+        for(int i=1;i<=num;i++)
+            cin>>array[i];
+        int res=0;
+        for(int i=1;i<=num;i++){
+            if((array[i]-i)%k!=0)
+                res++;
+        }
+        if(res==0)
+            cout<<0<<endl;
+        else if(res<=2)
+            cout<<1<<endl;
+        else
+            cout<<-1<<endl;
+    }
+}
+
+
+https://codeforces.com/contest/1823/problem/B
