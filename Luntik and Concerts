@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int t;
+  cin>>t;
+  long long a, b, c;
+  while(t--){
+    cin>>a>>b>>c;
+    long long n = a + 2 * b + 3 * c;
+    cout<<(n%2)<<endl;
+  }
+}
+
+
+https://codeforces.com/problemset/problem/1582/A
