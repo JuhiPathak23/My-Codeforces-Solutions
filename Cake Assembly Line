@@ -1,0 +1,19 @@
+for t in range(int(input())):
+    n, w, h = map(int, input().split())
+    c=list(map(int, input().split()))
+    x = list(map(int, input().split()))
+    flag= True
+    a, b = float('-inf'), float('inf')
+    for i in range(n):
+        a = max(a, c[i]-w+h-x[i])
+        b = min(b, c[i]-x[i]+w-h)
+        if a > b:
+            print("NO")
+            flag= False
+            break
+    if flag:
+        print("YES")
+        
+        
+        
+https://codeforces.com/problemset/problem/1786/B
