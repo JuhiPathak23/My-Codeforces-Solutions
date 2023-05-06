@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main(){
+  ll a, b, c;
+  cin>>a>>b>>c;
+  ll max = -1;
+  ll arr[] = {(a*b*c), (a + b + c), (a + b * c), (a * b + c), ((a +b)*c), (a*(b + c))};
+  for(auto i : arr){
+    max = (i > max) ? i : max;
+  }
+  cout<<max<<endl;
+}
+
+https://codeforces.com/problemset/problem/479/A
