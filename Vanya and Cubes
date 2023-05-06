@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int n;
+  cin>>n;
+  int count = 0;
+  int pre = 0;
+  int i = 1;
+  while(n >= pre + i){
+    count++;
+    n -= pre + i;
+    pre = pre + i;
+    i++;
+  }
+  cout<<count<<endl;
+}
+
+
+https://codeforces.com/problemset/problem/492/A
