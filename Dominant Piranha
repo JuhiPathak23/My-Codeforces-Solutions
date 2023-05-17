@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        long long n,a;
+        vector<long long>v;
+        cin>>n;
+        long long m = 0;
+        for(long long i=0; i<n; i++){
+            cin>>a;
+            m = max(m,a);
+            v.push_back(a);
+        }
+        long long pos = 0;
+        for(long long i=0; i<n; i++){
+            if( (v[i] > v[i-1] && v[i] == m) && (i > 0) ){
+                pos = i+1;
+                break;
+            }
+            else if( (v[i] > v[i+1] && v[i] == m) && (i < n-1) ){
+                pos = i+1;
+                break;
+            }
+        }
+        if(pos > 0)
+            cout<<pos<<endl;
+        else
+            cout<<-1<<endl;
+    }
+    return 0;
+}
+
+
+https://codeforces.com/problemset/problem/1433/C
