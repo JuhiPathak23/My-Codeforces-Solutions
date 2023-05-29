@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int n,a,b,w=0;
+  cin>>n;
+  cin>>a;
+  for(int i=0;i<n;i++){
+    cin>>b;
+    if(b>a)
+      w+=2;
+    else
+      w++;
+  }
+  cout<<w;
+  return 0;
+}
+
+
+https://codeforces.com/problemset/problem/677/A
