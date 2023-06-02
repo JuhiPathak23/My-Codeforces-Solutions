@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    long long t;
+    cin>>t;
+    while(t--){
+        long n;
+        cin>>n;
+        long long evens=0, odds=0;
+        for(long long i=0;i<n;i++){
+            long long x;
+            cin>>x;
+            if(x%2)
+                odds+=x;
+            else
+                evens+=x;
+        }
+        if(evens>odds)
+        cout<<"YES"<<endl;
+        else
+        cout<<"NO"<<endl;
+    }
+}
+
+
+https://codeforces.com/problemset/problem/1807/B
