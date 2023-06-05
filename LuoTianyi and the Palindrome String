@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        string s;
+        cin>>s;
+        long long c=0;
+        char x=s[0];
+        for(long long i=0;i<(long long)s.size();i++){
+            if(x!=s[i]){
+                c=1;
+                break;
+            }
+        }
+        if(c==0)
+            cout<<-1<<endl;
+        else
+            cout<<(long long)s.size()-1<<endl;
+    }
+}
+
+https://codeforces.com/problemset/problem/1825/A
