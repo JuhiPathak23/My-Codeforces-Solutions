@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+  int t;
+  cin>>t;
+  int x, n=0,c=0;
+  while(t--){
+    cin>>x;
+    if(x==-1 && n==0){
+      c++;
+      continue;
+    }
+    else if(x==-1 && n>0){
+      n--;
+      continue;
+    }
+    else{
+      n+=x;
+    }
+  }
+  cout<<c<<endl;
+}
+
+https://codeforces.com/problemset/problem/427/A
