@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int tc(string s, string t) {
+    int count = 0;
+    int l = s.length();
+    while(s.length() > 0 && t.length() > 0) {
+        if(s.back() == t.back()) 
+            t.pop_back();
+        else
+            count++;
+        s.pop_back();
+    }
+    if(t.length() == 0){
+      return count;
+    }
+    return l;
+}
+int main() {
+    int t;
+    cin>>t;
+    while(t--) {
+        string s;
+        cin>>s;
+        if(s.length()<2)
+            cout << s.length()<<endl;
+        else
+            cout<<min({tc(s,"00"),tc(s,"25"),tc(s,"50"),tc(s,"75")})<<endl;
+    }
+}
+
+
+https://codeforces.com/problemset/problem/1593/B
