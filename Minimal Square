@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int t;
+  cin>>t;
+  int x,y,area;
+  while(t--){
+    cin>>x>>y;
+    if(y<=x){
+      if(2*y<x)
+        area=x*x;
+      else
+        area=4*y*y;
+    }
+    else{
+      if(2*x<y)
+        area=y*y;
+      else
+        area=4*x*x;
+    }
+    cout<<area<<endl;
+  }
+  return 0;
+}
+
+
+https://codeforces.com/problemset/problem/1360/A
