@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  int t;
+  cin>>t;
+  int n;
+  while(t--){
+    cin>>n;
+    bool f=false;
+    if(n & 1){
+      for(int i = 1; i <= n; i++){
+        f=!f;
+        if(i == n-2){
+          cout<<i+1<<" ";
+          continue;
+        }
+        if(i == n-1){
+          cout<<i+1<<" ";
+          continue;
+        }
+        if(i == n){
+          cout<<i-2<<" ";
+          continue;
+        }
+        if(f)   cout<<i+1<<" ";
+        else    cout<<i-1<<" ";
+      }
+    }
+    else{
+      for(int i = 1; i <= n; i++){
+        f=!f;
+        if(f)   cout<<i+1<<" ";
+        else    cout<<i-1<<" ";
+      }
+    }
+    cout<<endl;
+  }
+}
+
+
+https://codeforces.com/problemset/problem/1541/A
