@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  string s, r = "";
+  cin>>s;
+  transform(s.begin(), s.end(), s.begin(), ::tolower);
+  for(auto i : s){
+    if( i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'y' || i == 'u')
+      continue;
+    else{
+      r += ".";
+      r += i;
+    }
+  }
+  cout<<r<<endl;
+}
+
+
+https://codeforces.com/problemset/problem/118/A
