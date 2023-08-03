@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int a, b;
+  cin>>a;
+  cin>>b;
+  int x,y;
+  x = a <= b ? a : b;
+  y = ((a <= b ? b : a) - x)/2;
+  cout<<x<<" "<<y;
+}
+
+https://codeforces.com/problemset/problem/581/A
