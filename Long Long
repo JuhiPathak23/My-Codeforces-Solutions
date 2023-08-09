@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        long long n,s=0,c=0,k=0;
+        cin>>n;
+        vector<int>v(n);
+        for(auto &x:v){
+            cin>>x;
+            s+=abs(x);
+        }
+        for(auto &x:v){
+            if(x==0 && k==0)
+                continue;
+            if(x<=0)
+                k++;
+            else{
+                if(k>0)
+                    c++;
+                k=0;
+            }
+        }
+        if(k)   c++;
+        cout<<s<<" "<<c<<endl;
+    }
+}
+
+
+
+https://codeforces.com/problemset/problem/1843/B
